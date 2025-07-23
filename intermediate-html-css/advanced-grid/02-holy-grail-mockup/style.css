@@ -92,7 +92,7 @@
 .container {
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 2fr 1fr 6fr 1fr;
+    grid-template-rows: auto auto 6fr auto;
 }
 
 ul {
@@ -104,6 +104,24 @@ ul {
     grid-column: 1 / -1;
 }
 
+.header {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-auto-flow: column;
+}
+
 .sidebar {
     grid-row: 2 / -2;
+    display: grid;
+    gap: 15px;
+}
+
+ul {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.menu ul {
+    justify-items: end;
+    justify-content: space-around;
 }
